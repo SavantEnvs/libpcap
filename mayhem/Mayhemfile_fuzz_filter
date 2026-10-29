@@ -1,0 +1,12 @@
+project: savantenvs/libpcap
+target: fuzz_filter
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_filter/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_filter
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_filter/fuzz_filter.dict

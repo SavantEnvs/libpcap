@@ -1,0 +1,3 @@
+# Build trees written by mayhem/build.sh (SPEC 6.2 item 16: build dirs must be gitignored).
+/build-fuzz/
+/build-tests/
